@@ -19,8 +19,10 @@ class Enana
         $this->puntosVida-=10;
         if($this->puntosVida<0){
             $this->situacion="muerta";
-        }else if($this->puntosVida==0){
-            $this->situacion="limbo";
+        }else if($this->puntosVida>0){
+            $this->situacion="viva";
+        }else{
+            $this->situacion="limbo"; 
         }
         return $this->puntosVida;
     }
@@ -51,9 +53,8 @@ class Enana
                 break;
             default:
             break;
-
-            return $this->puntosVida;
         }
+        return $this->puntosVida;
     }
 
     public function pocimaExtra(){
