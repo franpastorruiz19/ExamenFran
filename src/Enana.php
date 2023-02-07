@@ -22,6 +22,7 @@ class Enana
         }else if($this->puntosVida==0){
             $this->situacion="limbo";
         }
+        return $this->puntosVida;
     }
 
     public function heridaGrave(){
@@ -50,6 +51,8 @@ class Enana
                 break;
             default:
             break;
+
+            return $this->puntosVida;
         }
     }
 
@@ -59,18 +62,18 @@ class Enana
             $this->puntosVida+=50;
             $this->situacion="viva";
         }
+
+        return $this->puntosVida;
     }
 
     public function situacionActual(){
         if($this->puntosVida>0){
             $this->situacion="viva";
-            return $this->situacion;
         }else if ($this->puntosVida>0){
             $this->situacion="muerta";
-            return $this->situacion; 
         }else{
             $this->situacion="limbo";
-            return $this->situacion; 
         }
+        return $this->situacion; 
     }
 }
