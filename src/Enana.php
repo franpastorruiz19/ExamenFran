@@ -70,7 +70,7 @@ class Enana
     public function situacionActual(){
         if($this->puntosVida>0){
             $this->situacion="viva";
-        }else if ($this->puntosVida>0){
+        }else if ($this->puntosVida<0){
             $this->situacion="muerta";
         }else{
             $this->situacion="limbo";
